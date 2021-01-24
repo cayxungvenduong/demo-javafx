@@ -1,1 +1,0 @@
-/home/tunghoang/IdeaProjects/frdp/build/classes/java/main/com/demo/tunghoang/fxrdp/Main.class:/home/tunghoang/IdeaProjects/frdp/build/classes/java/main/module-info.class

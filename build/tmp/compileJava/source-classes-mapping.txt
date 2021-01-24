@@ -1,4 +1,0 @@
-com/demo/tunghoang/fxrdp/Main.java
- com.demo.tunghoang.fxrdp.Main
-module-info.java
- module-info
