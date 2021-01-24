@@ -4,6 +4,7 @@ plugins {
     java
     kotlin("jvm") version "1.4.10"
     id("org.openjfx.javafxplugin") version "0.0.9"
+    application
     id("org.beryx.jlink") version "2.23.1"
 }
 
@@ -33,7 +34,7 @@ jlink {
     jpackage {
         jpackageHome = "/usr/lib/jvm/java-14-openjdk-amd64"
         installerOptions.addAll(listOf("--description", "Demo", "--copyright", "Copyrigth 2021 TungHoang"))
-        installerType = "deb"
+        installerType = project.properties["installerType"].toString()
 
         when (installerType) {
             "msi" -> {
@@ -75,7 +76,6 @@ jlink {
 }
 
 
-
 open class MyClass : DefaultTask() {
     @org.gradle.api.tasks.TaskAction
     fun greet() {
@@ -94,7 +94,7 @@ dependencies {
 
 application {
     mainModule.set("frdp")
-    mainClass.set("com.demo.tunghoang.fxrdp.Main")
+    mainClass.set("frdp/com.demo.tunghoang.fxrdp.Main")
 
 }
 
